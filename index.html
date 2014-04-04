@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Carousel Template &middot; Bootstrap</title>
+    <title>safecoin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -28,13 +28,15 @@
 
     /* Special class on .container surrounding .navbar, used for positioning it into place. */
     .navbar-wrapper {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
       z-index: 10;
-      margin-top: 20px;
+      margin-top: 0px;
       margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+	  border-top: 5px solid #5593d7;
+	  background-color:rgba(255,255,255,1.00);
     }
     .navbar-wrapper .navbar {
 
@@ -142,14 +144,15 @@
     ------------------------- */
 
     .featurette-divider {
-      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+      /*margin: 80px 0; /* Space out the Bootstrap <hr> more */
+	  margin: 80px 0 20px;
     }
     .featurette {
-      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      padding-top: 70px; /* Vertically center images part 1: add padding above and below text. */
       overflow: hidden; /* Vertically center images part 2: clear their floats. */
     }
     .featurette-image {
-      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+      margin-top: 0px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
     }
 
     /* Give some space on the sides of the floated elements so text doesn't run right into it. */
@@ -167,6 +170,20 @@
       line-height: 1;
       letter-spacing: -1px;
     }
+	
+	/* CUSTOMIZING FORMS
+    -------------------------------------------------- */
+	
+	select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    border-radius: 4px;
+   
+    font-size: 16px;
+    height: auto;;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+	width:360px
+}
 
 
 
@@ -266,7 +283,7 @@
                                    <link rel="shortcut icon" href="ico/favicon.png">
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target=".navbar">
 
 
 
@@ -276,37 +293,30 @@
       <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
       <div class="container">
 
-        <div class="navbar navbar-inverse">
-          <div class="navbar-inner">
+        <div class="navbar">
+     
             <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="#">Project name</a>
+            <!--
+            <a class="brand" href="#">Safecoin</a>
+            -->
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#endusers">End Users</a></li>
+                <li><a href="#backers">Backers</a></li>
+                <li><a href="#developers">Developers</a></li>
+                <li><a href="#faqs">FAQs</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="nav-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li>
               </ul>
             </div><!--/.nav-collapse -->
-          </div><!-- /.navbar-inner -->
+         
         </div><!-- /.navbar -->
 
       </div> <!-- /.container -->
@@ -315,7 +325,7 @@
 
 
     <!-- Carousel
-    ================================================== -->
+    ==================================================
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
@@ -361,55 +371,83 @@
 
     <div class="container marketing">
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-        <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-        <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-      </div><!-- /.row -->
-
-
       <!-- START THE FEATURETTES -->
 
       <hr class="featurette-divider">
 
-      <div class="featurette">
-        <img class="featurette-image pull-right" src="img/examples/browser-icon-chrome.png">
-        <h2 class="featurette-heading">First featurette headling. <span class="muted">It'll blow your mind.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      <div id="home" class="featurette">
+        <img class="featurette-image pull-right" src="img/safecoin-safe-network.png">
+        <h2 class="featurette-heading">About <span class="muted">safecoin</span></h2>
+        <p class="lead">safecoin is the crypto currency of the SAFE (Secure Access For Everyone) network.</p>
+        <p>The SAFE network takes all the Internet services currently available today and decentralizes them, removing servers and other central points of weakness enabling privacy, security and anonymity to all Internet users for the first time.</p>
+<p>safecoin is a fair and transparent way of giving <a href="#">end users</a>, <a href="#">developers</a> and <a href="#">backers</a> the opportunity to get involved with SAFE network. safecoins may be earned, traded or purchased and a total cap of 4.3 billion will be generated.</p>
       </div>
 
       <hr class="featurette-divider">
 
-      <div class="featurette">
-        <img class="featurette-image pull-left" src="img/examples/browser-icon-firefox.png">
-        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      <div id="endusers" class="featurette">
+        <!--<img class="featurette-image pull-left" src="img/examples/browser-icon-firefox.png">-->
+        <h2 class="featurette-heading">End Users <span class="muted">Proof of Resource</span></h2>
+        <p class="lead">End users can mine (or earn) safecoins by providing Proof of Resource (POR).</p>
+        <p>In many crypto currencies and decentralized networks a proof of something is required to allow the network to validate actions or services via a mathematically verifiable mechanism. Within the SAFE network, nodes (users computers) are validated in a very efficient, accurate and cryptographically secure manner.  This mechanism enables a proof of resource which has some significant advantages. The resource in question is a computer's ability to store data chunks, which depends on CPU speed, bandwidth, disk space and on-line time, amongst others. This allows the proof to be a useful, measurable and an immediately verifiable.</p>
+<p>The SAFE network is designed to self-manage these resources and reward earners accordingly in a random fashion (uniformly distributed across the network) provided they are providing more resources than they are using. The earning speed is based on the storage space contributed to is verified by the network. </p>
+<p>There is no set distribution time for safecoins.  Unlike many currencies, the distribution of safecoin is backed by information.  The amount of coins generated by the SAFE network is directly related to the amount of resource provided to it. Given significant demand the SAFE network would receive significan resource and subsequently generate a large number of coins. If demand slows less resource would be provided and coin distribution would slow. This logic ensures no over supply, curbing inflation and retaining the currency value for all holders of safecoin.</p>
+<p>For a technical explanation visit the appendix (section 4) of <a href="https://github.com/maidsafe/Whitepapers/blob/master/Project-Safe.md">https://github.com/maidsafe/Whitepapers/blob/master/Project-Safe.md</a></p>
       </div>
 
       <hr class="featurette-divider">
 
-      <div class="featurette">
-        <img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">
-        <h2 class="featurette-heading">And lastly, this one. <span class="muted">Checkmate.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      <div id="backers" class="featurette">
+        <!--<img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">-->
+        <h2 class="featurette-heading">Backers <span class="muted">Purchase safecoins</span></h2>
+        <p class="lead">NEEDS REVISED safecoins will also be available for purchase. On a date soon to be announced, at bitcoin New York on the 8th of April, an intermediary coin, MaidSafeCoin, will be available for purchase. Approximately 430 million will go on sale and purchases can be made using either bitcoin or mastercoin with all purchases being recorded on the Bitcoin blockchain, via the Master protocol.</p>
+<p>It will be possible to trade MaidSafeCoin immediately, and this intermediary coin will remain while the SAFE test network remains in place. Once testing is complete and the full SAFE network is launched (with POR resource in place) all holders of MaidSafeCoin will exchange these for safecoin on a 1:1 ratio. From this point onward, MaidSafeCoin will be phased out in favour of safecoin.</p>
       </div>
 
+      <hr class="featurette-divider">
+      
+      <div id="developers" class="featurette">
+        <!--<img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">-->
+        <h2 class="featurette-heading">Developers <span class="muted">for safecoin</span></h2>
+        <p class="lead">MaidSafe proposes to reward developers in 2 ways. Firstly, safecoin can be earned by contributing bug fixes and code that are accepted into the master branch of the SAFE codebase. Secondly, developers that create apps that do not charge end users and are of benefit to the community will also be rewarded. The issuance mechanism for both groups will come via the MaidSafe Foundation (a not for profit organisation committed to providing education and innovation). </p>
+<p>15% of all safecoin earned will be allocated to the developer pool. This will ensure the developer community is highly motivated and rewarded for providing free-to-use applications and improvements to the underlying codebase that utilise safecoin as their revenue model. It is proposed that code commits and third party projects be chosen by polling the MaidSafe developer mailing list and payments will be allocated from the Foundation to successful projects/code enhancements.</p>
+      </div>
+      
+      <hr class="featurette-divider">
+      
+      <div id="faqs" class="featurette">
+        <!--<img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">-->
+        <h2 class="featurette-heading">FAQs <span class="muted">What would you like to know?</span></h2>
+        <p class="lead">Question </p>
+<p>Answer</p>
+      </div>
+      
+      <hr class="featurette-divider">
+      
+      <div id="contact" class="featurette">
+        <!--<img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">-->
+        <h2 class="featurette-heading">Contact <span class="muted">Us</span></h2>
+        <p class="lead">Get in touch </p>
+		<form role="form">
+        <div class="form-group">
+
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name">
+  </div>
+  <div class="form-group">
+
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+  </div>
+  <div class="form-group">
+
+    <textarea  class="form-control" rows="5" placeholder="Enquiry"></textarea>
+
+  </div>
+  
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+      </div>
+      
       <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
@@ -441,6 +479,22 @@
     <script src="js/bootstrap-collapse.js"></script>
     <script src="js/bootstrap-carousel.js"></script>
     <script src="js/bootstrap-typeahead.js"></script>
+    <script>
+	$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+    </script>
     <script>
       !function ($) {
         $(function(){

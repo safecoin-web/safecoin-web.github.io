@@ -186,6 +186,23 @@
 }
 
 
+.anchor-arrows {
+	padding:10px;
+	width:40px;
+	height:80px;
+	position:fixed;
+	bottom:0px;
+	right:0px;
+}
+
+.arrow {
+	width:25px;
+	height:25px;
+	background-color:#000000;
+	display:block;
+	margin:10px 0;
+}
+
 
     /* RESPONSIVE CSS
     -------------------------------------------------- */
@@ -307,12 +324,12 @@
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li class="active"><a href="#home">Home</a></li>
-                <li><a href="#endusers">End Users</a></li>
-                <li><a href="#backers">Backers</a></li>
-                <li><a href="#developers">Developers</a></li>
-                <li><a href="#faqs">FAQs</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="active"><a href="#display_0">Home</a></li>
+                <li><a href="#display_1">End Users</a></li>
+                <li><a href="#display_2">Backers</a></li>
+                <li><a href="#display_3">Developers</a></li>
+                <li><a href="#display_4">FAQs</a></li>
+                <li><a href="#display_5">Contact</a></li>
                 <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
               </ul>
             </div><!--/.nav-collapse -->
@@ -375,7 +392,7 @@
 
       <hr class="featurette-divider">
 
-      <div id="home" class="featurette">
+      <div id="display_0" class="featurette">
         <img class="featurette-image pull-right" src="img/safecoin-safe-network.png">
         <h2 class="featurette-heading">About <span class="muted">safecoin</span></h2>
         <p class="lead">safecoin is the crypto currency of the SAFE (Secure Access For Everyone) network.</p>
@@ -385,7 +402,7 @@
 
       <hr class="featurette-divider">
 
-      <div id="endusers" class="featurette">
+      <div id="display_1" class="featurette">
         <!--<img class="featurette-image pull-left" src="img/examples/browser-icon-firefox.png">-->
         <h2 class="featurette-heading">End Users <span class="muted">Proof of Resource</span></h2>
         <p class="lead">End users can mine (or earn) safecoins by providing Proof of Resource (POR).</p>
@@ -397,7 +414,7 @@
 
       <hr class="featurette-divider">
 
-      <div id="backers" class="featurette">
+      <div id="display_2" class="featurette">
         <!--<img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">-->
         <h2 class="featurette-heading">Backers <span class="muted">Purchase safecoins</span></h2>
         <p class="lead">NEEDS REVISED safecoins will also be available for purchase. On a date soon to be announced, at bitcoin New York on the 8th of April, an intermediary coin, MaidSafeCoin, will be available for purchase. Approximately 430 million will go on sale and purchases can be made using either bitcoin or mastercoin with all purchases being recorded on the Bitcoin blockchain, via the Master protocol.</p>
@@ -406,7 +423,7 @@
 
       <hr class="featurette-divider">
       
-      <div id="developers" class="featurette">
+      <div id="display_3" class="featurette">
         <!--<img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">-->
         <h2 class="featurette-heading">Developers <span class="muted">for safecoin</span></h2>
         <p class="lead">MaidSafe proposes to reward developers in 2 ways. Firstly, safecoin can be earned by contributing bug fixes and code that are accepted into the master branch of the SAFE codebase. Secondly, developers that create apps that do not charge end users and are of benefit to the community will also be rewarded. The issuance mechanism for both groups will come via the MaidSafe Foundation (a not for profit organisation committed to providing education and innovation). </p>
@@ -415,7 +432,7 @@
       
       <hr class="featurette-divider">
       
-      <div id="faqs" class="featurette">
+      <div id="display_4" class="featurette">
         <!--<img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">-->
         <h2 class="featurette-heading">FAQs <span class="muted">What would you like to know?</span></h2>
         <p class="lead">Question </p>
@@ -424,7 +441,7 @@
       
       <hr class="featurette-divider">
       
-      <div id="contact" class="featurette">
+      <div id="display_5" class="featurette">
         <!--<img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">-->
         <h2 class="featurette-heading">Contact <span class="muted">Us</span></h2>
         <p class="lead">Get in touch </p>
@@ -457,6 +474,11 @@
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
         <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        
+        <div class="anchor-arrows">
+        <a href="" id="prev" class="arrow"></a>
+        <a href="" id="next" class="arrow"></a>
+        </div>
       </footer>
 
     </div><!-- /.container -->
@@ -493,6 +515,55 @@
       }
     }
   });
+});
+    </script>
+    <!--
+    <script>
+    
+
+var index = -1;
+
+$('.next').click(function() {
+   index++;
+   $(window).scrollTop($('a').eq(index).position().top);
+
+});
+$('.previous').click(function() {
+   index--;
+   if(index < 0) { index = 0;}
+
+   $(window).scrollTop($('a').eq(index).position().top);
+});
+    </script>
+    -->
+    <script>
+    $(document).ready(function() {
+
+       // index to reference the next/prev display
+    var i = 0;
+       // get the total number of display sections
+       //    where the ID starts with "display_"
+    var len = $('div[id^="display_"]').length;
+
+
+       // for next, increment the index, or reset to 0, and concatenate 
+       //    it to "display_" and set it as the hash
+    $('#next').click(function() {
+        i = ++i % len;
+        window.location.hash = "display_" + i;
+        return false;
+    });
+
+
+       // for prev, if the index is 0, set it to the total length, then decrement
+       //    it, concatenate it to "display_" and set it as the hash
+    $('#prev').click(function() {
+        if (!i) i = len;
+        --i;
+        window.location.hash = "display_" + i;
+        return false;
+    });
+
 });
     </script>
     <script>

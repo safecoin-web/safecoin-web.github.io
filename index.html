@@ -198,11 +198,56 @@
 .arrow {
 	width:25px;
 	height:25px;
-	background-color:#000000;
 	display:block;
 	margin:10px 0;
 }
 
+.up {
+	background:#5793d4 url(css/imgs/arrow_up.png) no-repeat 7px 9px;
+}
+
+.down {
+	background:#5793d4 url(css/imgs/arrow_down.png) no-repeat 7px 9px;
+}
+
+.up:hover, .down:hover {
+	background-color:#29578a;
+}
+
+
+.size_lg {
+   font-size:42px;
+   border-width: 7px;
+   border-radius: 5px;
+   font-weight:bold;
+   margin-top:10px;
+   color:#5793d4;  
+}
+
+table h2 {
+	position:relative;
+	top:43px;
+	font-size:40px;
+	left:15px;
+	color:#999;
+}
+
+a.button {
+    background: none repeat scroll 0 0 #5593D7;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    border-style: none;
+    color: #FFFFFF !important;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    font-size: 22px;
+    font-weight: 400;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+a.button:hover {background-color:#29578a;}
 
     /* RESPONSIVE CSS
     -------------------------------------------------- */
@@ -325,8 +370,8 @@
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li class="active"><a href="#display_0">Home</a></li>
-                <li><a href="#display_1">End Users</a></li>
-                <li><a href="#display_2">Backers</a></li>
+                <li><a href="#display_1">Backers</a></li>
+                <li><a href="#display_2">End Users</a></li>
                 <li><a href="#display_3">Developers</a></li>
                 <li><a href="#display_4">FAQs</a></li>
                 <li><a href="#display_5">Contact</a></li>
@@ -391,6 +436,20 @@
       <!-- START THE FEATURETTES -->
 
       <hr class="featurette-divider">
+      
+      <table width="100%" style="border:0px;">
+                                <tr style=" display:block; font-size:12px;">
+                                    <td width="50" style="width:50px;text-align:center;">Days</td>
+                                    <td width="60" style="width:60px;text-align:center;">Hours</td>
+                                    <td width="55" style="width:55px;text-align:center;">Minutes</td>
+                                    <td width="71" style="width:60px;text-align:center;">Seconds</td>
+                                    <td width="670" rowspan="2" style=""><h2>Untill the sale starts.</h2></td>
+                                    <td width="231" rowspan="2" style=""><a href="http://www.buysafecoins.com" class="button" target="_blank">Buy MaidSafeCoin</a></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4"><span id="future_date"></span></td>
+                                </tr>
+                            </table>
 
       <div id="display_0" class="featurette">
         <img class="featurette-image pull-right" src="img/safecoin-safe-network.png">
@@ -399,27 +458,59 @@
         <p>The SAFE network takes all the Internet services currently available today and decentralizes them, removing servers and other central points of weakness enabling privacy, security and anonymity to all Internet users for the first time.</p>
 <p>safecoin is a fair and transparent way of giving <a href="#">end users</a>, <a href="#">developers</a> and <a href="#">backers</a> the opportunity to get involved with SAFE network. safecoins may be earned, traded or purchased and a total cap of 4.3 billion will be generated.</p>
       </div>
+      
+      <hr class="featurette-divider">
+
+      <div id="display_2" class="featurette">
+        <!--<img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">-->
+        <h2 class="featurette-heading">Backers <span class="muted">Purchase safecoins</span></h2>
+        <!--
+        <p class="lead">NEEDS REVISED safecoins will also be available for purchase. On a date soon to be announced, at bitcoin New York on the 8th of April, an intermediary coin, MaidSafeCoin, will be available for purchase. Approximately 430 million will go on sale and purchases can be made using either bitcoin or mastercoin with all purchases being recorded on the Bitcoin blockchain, via the Master protocol.</p>
+<p>It will be possible to trade MaidSafeCoin immediately, and this intermediary coin will remain while the SAFE test network remains in place. Once testing is complete and the full SAFE network is launched (with POR resource in place) all holders of MaidSafeCoin will exchange these for safecoin on a 1:1 ratio. From this point onward, MaidSafeCoin will be phased out in favour of safecoin.</p>-->
+        <p>It is also possible to buy safecoin and buyers anywhere in the world will be given the opportunity to do so during an up and coming crowd-sale. The sale event will run until ten percent of all safecoins (429,496,729) are sold or 30 days have passed, which ever happens first. safecoin will be made available to buyers through a proxy token, MaidSafeCoin. Once the MaidSafe network goes live, the MaidSafeCoins will be redeemable for the network&rsquo;s native safecoins at a 1-to-1 ratio.</p>
+        <p> The commencement date of the crowd sale will be announced at the Bitcoin conference in New York on the 8th of April. Purchases can be made using either bitcoin or mastercoin with all purchases being recorded on the Bitcoin blockchain, via the Master protocol. It will be possible to trade MaidSafeCoin immediately, and this intermediary coin will remain while the SAFE test network remains in place.</p>
+      </div>
 
       <hr class="featurette-divider">
 
       <div id="display_1" class="featurette">
         <!--<img class="featurette-image pull-left" src="img/examples/browser-icon-firefox.png">-->
         <h2 class="featurette-heading">End Users <span class="muted">Proof of Resource</span></h2>
-        <p class="lead">End users can mine (or earn) safecoins by providing Proof of Resource (POR).</p>
-        <p>In many crypto currencies and decentralized networks a proof of something is required to allow the network to validate actions or services via a mathematically verifiable mechanism. Within the SAFE network, nodes (users computers) are validated in a very efficient, accurate and cryptographically secure manner.  This mechanism enables a proof of resource which has some significant advantages. The resource in question is a computer's ability to store data chunks, which depends on CPU speed, bandwidth, disk space and on-line time, amongst others. This allows the proof to be a useful, measurable and an immediately verifiable.</p>
+        <p class="lead">End users can farm (or earn) safecoins by providing Proof of Resource (POR).</p>
+        <p>In many crypto currencies and decentralized networks a proof of something is required to allow the network to validate actions or services via a mathematically verifiable mechanism. Within the SAFE network, nodes (users computers) are validated in a very efficient, accurate and cryptographically secure manner.  End users can earn safecoin by contributing resources to the network, we call these resource providers &lsquo;farmers&rsquo;. Farmers provide these resources by running a vault (a node on the network) which handles requests and stores data for other users. There is no set up required to turn your computer into a vault, it is just a simple software download.</p>
+        <p>The resources in question are storage, CPU, online time and bandwidth. The SAFE network is able to constantly measure and immediately verify these resources, this is called Proof of Resource (POR). This POR facilitates the exchange of storage space on the SAFE network. To earn safecoin, farmers must provide more resources than they are using and the amount of safecoin they earn directly relates to the amount of resource they are providing. There are no humans involved in this process and the network stores data randomly across all nodes, similar to a lottery. The more resources you provide the more lottery tickets you have! </p>
+
+<!--<p>In many crypto currencies and decentralized networks a proof of something is required to allow the network to validate actions or services via a mathematically verifiable mechanism. Within the SAFE network, nodes (users computers) are validated in a very efficient, accurate and cryptographically secure manner.  This mechanism enables a proof of resource which has some significant advantages. The resource in question is a computer's ability to store data chunks, which depends on CPU speed, bandwidth, disk space and on-line time, amongst others. This allows the proof to be a useful, measurable and an immediately verifiable.</p>
 <p>The SAFE network is designed to self-manage these resources and reward earners accordingly in a random fashion (uniformly distributed across the network) provided they are providing more resources than they are using. The earning speed is based on the storage space contributed to is verified by the network. </p>
-<p>There is no set distribution time for safecoins.  Unlike many currencies, the distribution of safecoin is backed by information.  The amount of coins generated by the SAFE network is directly related to the amount of resource provided to it. Given significant demand the SAFE network would receive significan resource and subsequently generate a large number of coins. If demand slows less resource would be provided and coin distribution would slow. This logic ensures no over supply, curbing inflation and retaining the currency value for all holders of safecoin.</p>
+<p>There is no set distribution time for safecoins.  Unlike many currencies, the distribution of safecoin is backed by information.  The amount of coins generated by the SAFE network is directly related to the amount of resource provided to it. Given significant demand the SAFE network would receive significan resource and subsequently generate a large number of coins. If demand slows less resource would be provided and coin distribution would slow. This logic ensures no over supply, curbing inflation and retaining the currency value for all holders of safecoin.</p>-->
+<p></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">
+  <tr>
+    <td>Time			</td>
+    <td>Number of coins</td>
+  </tr>
+  <tr>
+    <td>first day		</td>
+    <td>800</td>
+  </tr>
+  <tr>
+    <td>first week		</td>
+    <td>1800</td>
+  </tr>
+  <tr>
+    <td>first month	</td>
+    <td>4000</td>
+  </tr>
+  <tr>
+    <td>first year		</td>
+    <td>19000</td>
+  </tr>
+</table>
+
 <p>For a technical explanation visit the appendix (section 4) of <a href="https://github.com/maidsafe/Whitepapers/blob/master/Project-Safe.md">https://github.com/maidsafe/Whitepapers/blob/master/Project-Safe.md</a></p>
       </div>
 
-      <hr class="featurette-divider">
-
-      <div id="display_2" class="featurette">
-        <!--<img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">-->
-        <h2 class="featurette-heading">Backers <span class="muted">Purchase safecoins</span></h2>
-        <p class="lead">NEEDS REVISED safecoins will also be available for purchase. On a date soon to be announced, at bitcoin New York on the 8th of April, an intermediary coin, MaidSafeCoin, will be available for purchase. Approximately 430 million will go on sale and purchases can be made using either bitcoin or mastercoin with all purchases being recorded on the Bitcoin blockchain, via the Master protocol.</p>
-<p>It will be possible to trade MaidSafeCoin immediately, and this intermediary coin will remain while the SAFE test network remains in place. Once testing is complete and the full SAFE network is launched (with POR resource in place) all holders of MaidSafeCoin will exchange these for safecoin on a 1:1 ratio. From this point onward, MaidSafeCoin will be phased out in favour of safecoin.</p>
-      </div>
+      
 
       <hr class="featurette-divider">
       
@@ -445,23 +536,7 @@
         <!--<img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">-->
         <h2 class="featurette-heading">Contact <span class="muted">Us</span></h2>
         <p class="lead">Get in touch </p>
-		<form role="form">
-        <div class="form-group">
-
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name">
-  </div>
-  <div class="form-group">
-
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-  </div>
-  <div class="form-group">
-
-    <textarea  class="form-control" rows="5" placeholder="Enquiry"></textarea>
-
-  </div>
-  
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+        <p><a href="mailto:contact@safecoin.io">contact@safecoin.io</a></p>
 
       </div>
       
@@ -473,11 +548,11 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2013 safecoin, All rights reserved. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
         
         <div class="anchor-arrows">
-        <a href="" id="prev" class="arrow"></a>
-        <a href="" id="next" class="arrow"></a>
+        <a href="" id="prev" class="arrow up"></a>
+        <a href="" id="next" class="arrow down"></a>
         </div>
       </footer>
 
@@ -566,6 +641,15 @@ $('.previous').click(function() {
 
 });
     </script>
+     <script type="text/javascript" src="js/jquery.countdownTimer.js"></script>
+    <script>
+                                $(function(){
+                                    $('#future_date').countdowntimer({
+                                        dateAndTime : "2014/04/22 09:00:00",
+                                        size : "lg"
+                                    });
+                                });
+                            </script>
     <script>
       !function ($) {
         $(function(){

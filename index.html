@@ -38,9 +38,7 @@
 	  border-top: 5px solid #5593d7;
 	  background-color:rgba(255,255,255,1.00);
     }
-    .navbar-wrapper .navbar {
-
-    }
+    .navbar-right { float:right!important}
 
     /* Remove border and change up box shadow for more contrast */
     .navbar .navbar-inner {
@@ -226,7 +224,7 @@
 
 table h2 {
 	position:relative;
-	top:43px;
+	top:48px;
 	font-size:40px;
 	left:15px;
 	color:#999;
@@ -240,7 +238,6 @@ a.button {
     color: #FFFFFF !important;
     cursor: pointer;
     display: inline-block;
-    float: right;
     font-size: 22px;
     font-weight: 400;
     padding: 10px 15px;
@@ -248,6 +245,8 @@ a.button {
 }
 
 a.button:hover {background-color:#29578a;}
+
+.p10 { padding:20px 0;}
 
     /* RESPONSIVE CSS
     -------------------------------------------------- */
@@ -377,6 +376,9 @@ a.button:hover {background-color:#29578a;}
                 <li><a href="#display_5">Contact</a></li>
                 <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
               </ul>
+               <ul class="nav navbar-nav navbar-right">
+               <li class="p10">Total USD raised so far - $0.00</li>
+               </ul>
             </div><!--/.nav-collapse -->
          
         </div><!-- /.navbar -->
@@ -444,7 +446,7 @@ a.button:hover {background-color:#29578a;}
                                     <td width="55" style="width:55px;text-align:center;">Minutes</td>
                                     <td width="71" style="width:60px;text-align:center;">Seconds</td>
                                     <td width="670" rowspan="2" style=""><h2>Untill the sale starts.</h2></td>
-                                    <td width="231" rowspan="2" style=""><a href="http://www.buysafecoins.com" class="button" target="_blank">Buy MaidSafeCoin</a></td>
+                                    <td width="231" style="text-align:center;" rowspan="2"><a href="http://www.buysafecoins.com" class="button" target="_blank">Buy MaidSafeCoin</a><p>17,000 per btc and 1700 per msc</p></td>
                                 </tr>
                                 <tr>
                                     <td colspan="4"><span id="future_date"></span></td>
@@ -518,7 +520,7 @@ a.button:hover {background-color:#29578a;}
         <!--<img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">-->
         <h2 class="featurette-heading">Developers <span class="muted">for safecoin</span></h2>
         <p class="lead">MaidSafe proposes to reward developers in 2 ways. Firstly, safecoin can be earned by contributing bug fixes and code that are accepted into the master branch of the SAFE codebase. Secondly, developers that create apps that do not charge end users and are of benefit to the community will also be rewarded. The issuance mechanism for both groups will come via the MaidSafe Foundation (a not for profit organisation committed to providing education and innovation). </p>
-<p>15% of all safecoin earned will be allocated to the developer pool. This will ensure the developer community is highly motivated and rewarded for providing free-to-use applications and improvements to the underlying codebase that utilise safecoin as their revenue model. It is proposed that code commits and third party projects be chosen by polling the MaidSafe developer mailing list and payments will be allocated from the Foundation to successful projects/code enhancements.</p>
+<p>15% of all safecoin earned will be allocated to the developer pool. This will ensure the developer community is highly motivated and rewarded for providing free-to-use applications and improvements to the underlying codebase that utilize safecoin as their revenue model. It is proposed that developers are able to use the network to publish their applications. These application developers are called Builders and the network will reward use of these applications by paying the Builders in safecoin based on the application use by users of the system.  This is calculated as the application developer can insert their own wallet address in their application (which becomes immutable) on the network. This exciting proposal may be a fully automatic revenue model for both open source projects, private individuals and application development companies.  </p>
       </div>
       
       <hr class="featurette-divider">

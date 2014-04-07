@@ -73,43 +73,36 @@
 
 
 
-    <!-- Carousel
-    ==================================================
+    <!-- Carousel 
+    ==================================================-->
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="img/examples/slide-01.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
           <img src="img/examples/slide-02.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Learn more</a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="img/examples/slide-03.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
-            </div>
-          </div>
-        </div>
+            
+              <div class="safecoin-network-logo"></div>
+              <p class="lead">You can support the SAFE Network in:</p>
+              <div class="time-units">
+      <div class="timer-days">Days</div>
+      <div class="timer-hours">Hours</div>
+      <div class="timer-mins">Minutes</div>
+      <div class="timer-seconds">Seconds</div>
       </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+      <div id="future_date" class="countdown"></div>
+      <a href="http://www.buysafecoins.com" class="button" target="_blank">Buy MaidSafeCoin</a>
+      <p>17,000 per btc and<br>1700 per msc</p>
+      <!--
+              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+              -->
+            </div>
+          </div>
+        </div>
+        
+       
+      </div>
+     
     </div><!-- /.carousel -->
 
 
@@ -122,9 +115,10 @@
 
       <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
       
+      <!--
       <div class="top-info">
+      
       <div class="time-units">
       <div class="timer-days">Days</div>
       <div class="timer-hours">Hours</div>
@@ -132,11 +126,12 @@
       <div class="timer-seconds">Seconds</div>
       </div>
       <div id="future_date" class="countdown"></div>
-      <div class="sale-text"><h2>Until the sale starts.</h2></div>
+      <div class="sale-text"><h2>Until the sale starts.</h2></div>-->
       
+      <!--
       <div class="buy"><a href="http://www.buysafecoins.com" class="button" target="_blank">Buy MaidSafeCoin</a>
       <p>17,000 per btc and<br>1700 per msc</p></div>
-      </div>
+      </div>-->
       
       <!--
       <table width="100%" style="border:0px;">
@@ -393,7 +388,7 @@ $("#prev").click(function(e){
                                 $(function(){
                                     $('#future_date').countdowntimer({
                                         dateAndTime : "2014/04/22 09:00:00",
-                                        size : "lg"
+                                        size : "sm"
                                     });
                                 });
                             </script>

@@ -147,7 +147,6 @@
       margin-top: 0px;
       margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
 	  border-top: 5px solid #5593d7;
-	  background-color:rgba(255,255,255,1.00);
     }
     .navbar-right { float:right!important}
 
@@ -170,7 +169,10 @@
     /* Navbar links: increase padding for taller navbar */
     .navbar .nav > li > a {
       padding: 15px 20px;
+	  background-color:#fff;
     }
+	
+	.navbar .nav > li > a:hover {background-color:#fff;}
 
     /* Offset the responsive button for proper vertical alignment */
     .navbar .btn-navbar {
@@ -216,9 +218,9 @@
     .carousel-caption {
       background-color: transparent;
       position: static;
-      max-width: 550px;
+	  text-align:center;
       padding: 0 20px;
-      margin-top: 200px;
+      margin-top: 105px;
     }
     .carousel-caption h1,
     .carousel-caption .lead {
@@ -230,6 +232,15 @@
     .carousel-caption .btn {
       margin-top: 10px;
     }
+	
+	.safecoin-network-logo {
+		background:url(imgs/safecoin-safe-network-white.png) no-repeat 0 0;
+		width:250px;
+		height:124px;
+		margin:0 auto;
+		text-align:center;
+		text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
 
 
 
@@ -310,6 +321,9 @@
 	height:25px;
 	display:block;
 	margin:10px 0;
+  -webkit-border-radius: 2px; 
+  -moz-border-radius: 2px; 
+  border-radius: 2px; 
 }
 
 .up {
@@ -317,7 +331,7 @@
 }
 
 .down {
-	background:#5793d4 url(imgs/arrow_down.png) no-repeat 7px 9px;
+	background:#5793d4 url(imgs/arrow_down.png) no-repeat 7px 10px;
 }
 
 .up:hover, .down:hover {
@@ -325,20 +339,33 @@
 }
 
 
-.size_lg {
+.size_sm {
 	font-family: 'OpenSansBold', Arial, sans-serif;
-   font-size:70px;
+   font-size:80px;
    border-width: 7px;
    border-radius: 5px;
    font-weight:bold;
-   margin-top:10px;
-   color:#5793d4;  
+   color:#fff;
+   text-shadow: 0 1px 1px rgba(0,0,0,.4);
+   clear:both;
+   display:block!important; 
+   margin-bottom:10px;
+}
+
+.size_lg {
+    border-radius: 5px;
+    border-width: 7px;
+    color: #5793D4;
+    font-family: 'OpenSansBold',Arial,sans-serif;
+    font-size: 70px;
+    font-weight:bold;
+	margin-top:10px;
 }
 
 .time-units {
 	clear:both;
-	margin-bottom:10px;
-	color:rgba(198,198,198,1.00);
+	margin-top:10px;
+	color:rgba(240,240,240,1.00);
 }
 .timer-days, .timer-hours, .timer-mins, .timer-seconds, .sale-text, .countdown {
 	display:inline-block;
@@ -346,8 +373,8 @@
 
 .timer-days { width:85px; text-align:center}
 .timer-hours { width:105px; text-align:center}
-.timer-mins {width:100px; text-align:center}
-.timer-seconds {width:105px; text-align:center}
+.timer-mins {width:125px; text-align:center}
+.timer-seconds {width:115px; text-align:center}
 
 .sale-text h2 {
 	position:relative;

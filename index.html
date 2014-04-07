@@ -368,12 +368,12 @@ a.button:hover {background-color:#29578a;}
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li class="active"><a href="#display_0">Home</a></li>
-                <li><a href="#display_1">Backers</a></li>
-                <li><a href="#display_2">End Users</a></li>
-                <li><a href="#display_3">Developers</a></li>
-                <li><a href="#display_4">FAQs</a></li>
-                <li><a href="#display_5">Contact</a></li>
+                <li class="active"><a href="#div1">Home</a></li>
+                <li><a href="#div2">Backers</a></li>
+                <li><a href="#div3">End Users</a></li>
+                <li><a href="#div4">Developers</a></li>
+                <li><a href="#div5">FAQs</a></li>
+                <li><a href="#div6">Contact</a></li>
                 <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
               </ul>
                <ul class="nav navbar-nav navbar-right">
@@ -445,7 +445,7 @@ a.button:hover {background-color:#29578a;}
                                     <td width="60" style="width:60px;text-align:center;">Hours</td>
                                     <td width="55" style="width:55px;text-align:center;">Minutes</td>
                                     <td width="71" style="width:60px;text-align:center;">Seconds</td>
-                                    <td width="670" rowspan="2" style=""><h2>Untill the sale starts.</h2></td>
+                                    <td width="670" rowspan="2" style=""><h2>Until the sale starts.</h2></td>
                                     <td width="231" style="text-align:center;" rowspan="2"><a href="http://www.buysafecoins.com" class="button" target="_blank">Buy MaidSafeCoin</a><p>17,000 per btc and 1700 per msc</p></td>
                                 </tr>
                                 <tr>
@@ -453,7 +453,7 @@ a.button:hover {background-color:#29578a;}
                                 </tr>
                             </table>
 
-      <div id="display_0" class="featurette">
+      <div id="div1" class="featurette section">
         <img class="featurette-image pull-right" src="img/safecoin-safe-network.png">
         <h2 class="featurette-heading">About <span class="muted">safecoin</span></h2>
         <p class="lead">safecoin is the crypto currency of the SAFE (Secure Access For Everyone) network.</p>
@@ -463,7 +463,7 @@ a.button:hover {background-color:#29578a;}
       
       <hr class="featurette-divider">
 
-      <div id="display_1" class="featurette">
+      <div id="div2" class="featurette section">
         <!--<img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">-->
         <h2 class="featurette-heading">Backers <span class="muted">Purchase safecoins</span></h2>
         <!--
@@ -475,7 +475,7 @@ a.button:hover {background-color:#29578a;}
 
       <hr class="featurette-divider">
 
-      <div id="display_2" class="featurette">
+      <div id="div3" class="featurette section">
         <!--<img class="featurette-image pull-left" src="img/examples/browser-icon-firefox.png">-->
         <h2 class="featurette-heading">End Users <span class="muted">Proof of Resource</span></h2>
         <p class="lead">End users can farm (or earn) safecoins by providing Proof of Resource (POR).</p>
@@ -516,7 +516,7 @@ a.button:hover {background-color:#29578a;}
 
       <hr class="featurette-divider">
       
-      <div id="display_3" class="featurette">
+      <div id="div4" class="featurette section">
         <!--<img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">-->
         <h2 class="featurette-heading">Developers <span class="muted">for safecoin</span></h2>
         <p class="lead">MaidSafe proposes to reward developers in 2 ways. Firstly, safecoin can be earned by contributing bug fixes and code that are accepted into the master branch of the SAFE codebase. Secondly, developers that create apps that do not charge end users and are of benefit to the community will also be rewarded. The issuance mechanism for both groups will come via the MaidSafe Foundation (a not for profit organisation committed to providing education and innovation). </p>
@@ -525,7 +525,7 @@ a.button:hover {background-color:#29578a;}
       
       <hr class="featurette-divider">
       
-      <div id="display_4" class="featurette">
+      <div id="div5" class="featurette section">
         <!--<img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">-->
         <h2 class="featurette-heading">FAQs <span class="muted">What would you like to know?</span></h2>
         <p class="lead">Question </p>
@@ -534,7 +534,7 @@ a.button:hover {background-color:#29578a;}
       
       <hr class="featurette-divider">
       
-      <div id="display_5" class="featurette">
+      <div id="div6" class="featurette section">
         <!--<img class="featurette-image pull-right" src="img/examples/browser-icon-safari.png">-->
         <h2 class="featurette-heading">Contact <span class="muted">Us</span></h2>
         <p class="lead">Get in touch </p>
@@ -553,8 +553,8 @@ a.button:hover {background-color:#29578a;}
         <p>&copy; 2013 safecoin, All rights reserved. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
         
         <div class="anchor-arrows">
-        <a href="" id="prev" class="arrow up"></a>
-        <a href="" id="next" class="arrow down"></a>
+        <a href="#" id="prev" class="arrow up"></a>
+        <a href="#" id="next" class="arrow down"></a>
         </div>
       </footer>
 
@@ -613,6 +613,8 @@ $('.previous').click(function() {
 });
     </script>
     -->
+    
+    <!--
     <script>
     $(document).ready(function() {
 
@@ -642,7 +644,36 @@ $('.previous').click(function() {
     });
 
 });
+    </script>-->
+    
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script>
+
+
+var section = 1;
+
+$("#next").click(function(e){
+  e.preventDefault();
+  if(section < 6){
+    section++;
+  }
+  TweenMax.to(window, 0.5, {scrollTo:{y:$("#div" + section).offset().top}});
+});
+
+$("#prev").click(function(e){
+  e.preventDefault();
+  if(section > 1){
+    section--;
+    TweenMax.to(window, 0.5, {scrollTo:{y:$("#div" + section).offset().top}});
+  }
+  
+});
     </script>
+    
+    
      <script type="text/javascript" src="js/jquery.countdownTimer.js"></script>
     <script>
                                 $(function(){

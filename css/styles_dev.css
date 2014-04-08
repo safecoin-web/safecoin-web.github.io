@@ -173,7 +173,6 @@
     /* Navbar links: increase padding for taller navbar */
     .navbar .nav > li > a {
       padding: 15px 20px;
-	  background-color:#fff;
     }
 	
 	.navbar .nav > li > a:hover {background-color:#fff;}
@@ -286,6 +285,7 @@
     }
     .featurette-image.pull-right {
       margin-left: 40px;
+	  margin-bottom:30px;
     }
 
     /* Thin out the marketing headings */
@@ -511,6 +511,8 @@ a.button:hover {background-color:#29578a;}
         max-width: 40%;
         margin: 0 auto 20px;
       }
+	  
+	  .half-w { width:100%;}
     }
 
 
@@ -547,18 +549,29 @@ a.button:hover {background-color:#29578a;}
       }
       .carousel-caption .lead,
       .carousel-caption .btn {
-        font-size: 18px;
+        font-size: 12px;
       }
 	  
 	  .size_sm {
-   font-size:60px; 
-   margin-bottom:20px;
+   font-size:40px; 
+
+   margin:0 auto 20px auto;
 }
 
-.timer-days { width:75px; text-align:center}
-.timer-hours { width:80px; text-align:center}
-.timer-mins {width:95px; text-align:center}
-.timer-seconds {width:85px; text-align:center}
+.timer-days { width:50px; text-align:center}
+.timer-hours { width:60px; text-align:center}
+.timer-mins {width:65px; text-align:center}
+.timer-seconds {width:55px; text-align:center}
+
+a.button {
+
+    border-radius: 3px;
+
+
+
+    font-size: 16px;
+    padding: 8px 10px;
+}
 
       .marketing .span4 + .span4 {
         margin-top: 40px;

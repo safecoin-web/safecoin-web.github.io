@@ -151,6 +151,8 @@
 	  border-top: 5px solid #5593d7;
     }
     .navbar-right { float:right!important}
+	
+	/*.navbar-fixed-top, .navbar-fixed-bottom { position:fixed;}*/
 
     /* Remove border and change up box shadow for more contrast */
     .navbar .navbar-inner {
@@ -171,7 +173,6 @@
     /* Navbar links: increase padding for taller navbar */
     .navbar .nav > li > a {
       padding: 15px 20px;
-	  background-color:#fff;
     }
 	
 	.navbar .nav > li > a:hover {background-color:#fff;}
@@ -284,6 +285,7 @@
     }
     .featurette-image.pull-right {
       margin-left: 40px;
+	  margin-bottom:30px;
     }
 
     /* Thin out the marketing headings */
@@ -417,6 +419,11 @@ a.button {
 
 a.button:hover {background-color:#29578a;}
 
+.funds-raised-flag {
+	float:right;
+	position:relative;
+	top:50px;
+}
 .raised {
 	padding:5px 15px 10px 15px;
 	font-size:14px;
@@ -457,6 +464,16 @@ a.button:hover {background-color:#29578a;}
     -------------------------------------------------- */
 
     @media (max-width: 979px) {
+		
+		.navbar-fixed-top {
+			margin-top:12px;
+			margin-bottom:0px;
+		}
+		
+		.nav-collapse, .nav-collapse.collapse {
+			position:relative;
+			top:10px;
+		}
 
       .container.navbar-wrapper {
         margin-bottom: 0;
@@ -466,6 +483,10 @@ a.button:hover {background-color:#29578a;}
         border-radius: 0;
         margin: -20px 0;
       }
+	  .carousel { margin-top:20px;}
+	  .carousel-caption {
+		  margin-top:70px;
+		 }
 
       .carousel .item {
         height: 500px;
@@ -474,6 +495,10 @@ a.button:hover {background-color:#29578a;}
         width: auto;
         height: 500px;
       }
+	  
+	  .funds-raised-flag {
+	top:0px;
+}
 
       .featurette {
         height: auto;
@@ -486,6 +511,8 @@ a.button:hover {background-color:#29578a;}
         max-width: 40%;
         margin: 0 auto 20px;
       }
+	  
+	  .half-w { width:100%;}
     }
 
 
@@ -493,8 +520,10 @@ a.button:hover {background-color:#29578a;}
 		.navbar {
 			background-color:#fff;
 		}
+		
+		
       .navbar-inner {
-        margin: -20px;
+       /* margin: -20px;*/
       }
 
       .carousel {
@@ -505,10 +534,10 @@ a.button:hover {background-color:#29578a;}
 
       }
       .carousel .item {
-        height: 300px;
+        height: 400px;
       }
       .carousel img {
-        height: 300px;
+        height: 400px;
       }
       .carousel-caption {
         width: 65%;
@@ -520,8 +549,29 @@ a.button:hover {background-color:#29578a;}
       }
       .carousel-caption .lead,
       .carousel-caption .btn {
-        font-size: 18px;
+        font-size: 12px;
       }
+	  
+	  .size_sm {
+   font-size:40px; 
+
+   margin:0 auto 20px auto;
+}
+
+.timer-days { width:50px; text-align:center}
+.timer-hours { width:60px; text-align:center}
+.timer-mins {width:65px; text-align:center}
+.timer-seconds {width:55px; text-align:center}
+
+a.button {
+
+    border-radius: 3px;
+
+
+
+    font-size: 16px;
+    padding: 8px 10px;
+}
 
       .marketing .span4 + .span4 {
         margin-top: 40px;

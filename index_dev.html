@@ -10,7 +10,7 @@
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/styles_dev.css" rel="stylesheet">
     <style>
 
     </style>
@@ -34,42 +34,33 @@
 
     <!-- NAVBAR
     ================================================== -->
-    <div class="navbar-wrapper">
-      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-      <div class="container">
-
-        <div class="navbar">
-     
-            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!--
-            <a class="brand" href="#">Safecoin</a>
-            -->
-            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li class="active"><a href="#div1">Home</a></li>
+   
+    
+    
+    
+    
+    
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#div1">Home</a></li>
                 <li><a href="#div2">Backers</a></li>
                 <li><a href="#div3">End Users</a></li>
                 <li><a href="#div4">Developers</a></li>
                 <li><a href="#div5">FAQs</a></li>
                 <li><a href="#div6">Contact</a></li>
-                <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
-              </ul>
-               <div class="nav navbar-nav navbar-right">
-               <div class="raised">Total raised so far
-               <div class="sum">$0.00</div></div>
-               </div>
-            </div><!--/.nav-collapse -->
-         
-        </div><!-- /.navbar -->
-
-      </div> <!-- /.container -->
-    </div><!-- /.navbar-wrapper -->
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
 
 
 
@@ -80,6 +71,10 @@
         <div class="item active">
           <img src="img/examples/slide-02.jpg" alt="">
           <div class="container">
+          		<div class="funds-raised-flag">
+               <div class="raised">Total raised so far
+               <div class="sum">$0.00</div></div>
+               </div>
             <div class="carousel-caption">
             
               <div class="safecoin-network-logo"></div>

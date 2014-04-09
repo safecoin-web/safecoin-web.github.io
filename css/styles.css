@@ -515,6 +515,8 @@ a.button:hover {background-color:#29578a;}
       }
 	  
 	  .half-w { width:100%;}
+	  
+	  .anchor-arrows { width:30px;}
     }
 
 
@@ -542,8 +544,8 @@ a.button:hover {background-color:#29578a;}
         height: 400px;
       }
       .carousel-caption {
-        width: 65%;
-        padding: 0 70px;
+        width: auto;
+        padding: 0;
 		margin:100px auto 0 auto;
       }
       .carousel-caption h1 {

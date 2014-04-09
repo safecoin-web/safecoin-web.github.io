@@ -474,6 +474,8 @@ a.button:hover {background-color:#29578a;}
 			position:relative;
 			top:10px;
 		}
+		
+		.nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a { font-weight:normal;}
 
       .container.navbar-wrapper {
         margin-bottom: 0;
@@ -553,15 +555,17 @@ a.button:hover {background-color:#29578a;}
       }
 	  
 	  .size_sm {
-   font-size:40px; 
+   font-size:35px; 
 
    margin:0 auto 20px auto;
 }
-
-.timer-days { width:50px; text-align:center}
-.timer-hours { width:60px; text-align:center}
-.timer-mins {width:65px; text-align:center}
-.timer-seconds {width:55px; text-align:center}
+.timer-days, .timer-hours, .timer-mins, .timer-seconds {
+	font-size:11px;
+}
+.timer-days { width:40px; text-align:center}
+.timer-hours { width:45px; text-align:center}
+.timer-mins {width:55px; text-align:center}
+.timer-seconds {width:50px; text-align:center}
 
 a.button {
 
@@ -570,7 +574,7 @@ a.button {
 
 
     font-size: 16px;
-    padding: 8px 10px;
+    padding: 6px 10px 8px 10px;
 }
 
       .marketing .span4 + .span4 {

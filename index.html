@@ -95,13 +95,44 @@
 
             <div class="safecoin-network-logo"></div>
             <p class="lead">You can support the SAFE Network in:</p>
+            <!-- Countdown dashboard start -->
+		<div id="countdown_dashboard">
+			<div class="dash days_dash">
+				<span class="dash_title">days</span>
+				<div class="digit">0</div>
+				<div class="digit">0</div>
+			</div>
+
+			<div class="dash hours_dash">
+				<span class="dash_title">hours</span>
+				<div class="digit">0</div>
+				<div class="digit">0</div>
+			</div>
+
+			<div class="dash minutes_dash">
+				<span class="dash_title">minutes</span>
+				<div class="digit">0</div>
+				<div class="digit">0</div>
+			</div>
+
+			<div class="dash seconds_dash">
+				<span class="dash_title">seconds</span>
+				<div class="digit">0</div>
+				<div class="digit">0</div>
+			</div>
+
+		</div>
+		<!-- Countdown dashboard end -->
+            
+            
+            <!--
             <div class="time-units">
               <div class="timer-days">Days</div>
               <div class="timer-hours">Hours</div>
               <div class="timer-mins">Minutes</div>
               <div class="timer-seconds">Seconds</div>
             </div>
-            <div id="future_date" class="countdown"></div>
+            <div id="future_date" class="countdown"></div>-->
             <a href="http://www.buysafecoins.com" class="button" target="_blank">Buy MaidSafeCoin</a>
             <p>17,000 per btc</p>
           </div>
@@ -353,29 +384,23 @@
   });
   </script>
 
-
-  <script type="text/javascript" src="js/jquery.countdownTimer.js"></script>
-  <script>
-  $(function ()
-  {
-    $('#future_date').countdowntimer(
-    {
-      dateAndTime: "2014/04/22 09:00:00",
-      size: "sm"
-    });
-  });
-  </script>
-  <script>
-  ! function ($)
-  {
-    $(function ()
-    {
-      // carousel demo
-      $('#myCarousel').carousel()
-    })
-  }(window.jQuery)
-  </script>
-  <script src="../assets/js/holder/holder.js"></script>
+  <script language="Javascript" type="text/javascript" src="js/jquery.lwtCountdown-1.0.js"></script>
+  <script language="javascript" type="text/javascript">
+			jQuery(document).ready(function() {
+				$('#countdown_dashboard').countDown({
+					targetDate: {
+						'day': 		22,
+						'month': 	4,
+						'year': 	2014,
+						'hour': 	9,
+						'min': 		0,
+						'sec': 		0,
+						'utc': true
+					}
+				});
+				
+			});
+		</script>
 </body>
 
 </html>

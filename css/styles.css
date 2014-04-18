@@ -223,7 +223,7 @@
       position: static;
 	  text-align:center;
       padding: 0 20px;
-      margin-top: 105px;
+      margin-top: 80px;
     }
     .carousel-caption h1,
     .carousel-caption .lead {
@@ -413,13 +413,16 @@ a.button {
     color: #FFFFFF !important;
     cursor: pointer;
     display: inline-block;
-    font-size: 22px;
+    
     font-weight: 400;
-    padding: 10px 15px;
+   
     text-decoration: none;
 }
 
 a.button:hover {background-color:#29578a;}
+
+a.btn-med {font-size: 22px;  padding: 10px 15px;}
+a.btn-sml { font-size:16px; padding: 8px 10px;}
 
 .funds-raised-flag {
 	float:right;
@@ -461,6 +464,8 @@ a.button:hover {background-color:#29578a;}
 .muted {font-family: 'OpenSansLight', Arial, sans-serif;}
 
 .half-w { width:55%;}
+
+.mb20 { margin-bottom:20px!important;}
 
     /* RESPONSIVE CSS
     -------------------------------------------------- */
@@ -548,7 +553,7 @@ a.button:hover {background-color:#29578a;}
       .carousel-caption {
         width: auto;
         padding: 0;
-		margin:100px auto 0 auto;
+		margin:70px auto 0 auto;
       }
       .carousel-caption h1 {
         font-size: 30px;

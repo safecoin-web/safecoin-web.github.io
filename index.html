@@ -26,8 +26,8 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
   <link rel="shortcut icon" href="ico/favicon.png">
-  
-  
+
+
 
  <script type="text/javascript">
 
@@ -97,24 +97,24 @@
           <div class="carousel-caption">
 			<div class="bitcoins-available">
             <div class="safecoin-network-logo"></div>
-            
+
             <div class="buying-active">
-            
+
             <h1 class="new-figure">&nbsp;&nbsp;&nbsp;&nbsp;</h1>
             <p class="remaining-text">Estimated  bitcoins worth of maidsafecoins (MSAFE) still remaining.</p>
 		<h1>Buy with bitcoin by sending your BTC to this address :
         <span class="black bitcoin-address">1KHfLixa2idRnZXMUfEisBati1vpywaH6E</span></h1>
 		<h2>Please do not send Mastercoins to this address.</h2>
         </div>
-        
-     
+
+
         <div class="buying-disabled">
         <h1><span class="black">Thank  you for participating in this crowd sale.</span></h1>
 		<h2>The BTC part of the sale is now complete.</h2>
         <p>Please note that any BTC sent now will be refunded.</p>
         </div>
-        
-        
+
+
         </div>
 		</div>
           </div>
@@ -384,33 +384,33 @@
 
   });
   </script>
- 
+
   <script>
-  $(function() {		
-	var intervalID = window.setInterval(function(){
-	  $.getJSON( "http://btc.blockr.io/api/v1/address/info/" + $(".bitcoin-address").html(), function( json ) {
-	  
-		 // Handles the section for showing counter or not
-		var totalBitcoins = 7341.02;
-		if (json.data.totalreceived > totalBitcoins) {
-			window.clearInterval(intervalID);
-			$(".buying-active").hide();
-			$(".buying-disabled").show();
-		} else {		
-			// handles the fade in for switching to a new remaining count
-			var currentRemaining = $( ".new-figure" ).html();
-			var newRemaining = totalBitcoins - json.data.totalreceived;
-			
-			if (currentRemaining == "&nbsp;&nbsp;&nbsp;&nbsp;" || currentRemaining - newRemaining >= 0.01) {
-				 $( ".new-figure" ).fadeOut( 500, "linear", function() {
-					$( ".new-figure" ).html(newRemaining.toFixed(2));
-					$( ".new-figure" ).fadeIn( 500, "linear");
-				});
-			}
-		}
-	});
-	}, 20000);
+  $(function() {
+    updateBTCLeft();
+    window.intervalID = window.setInterval(updateBTCLeft, 20000);
   });
+
+  function updateBTCLeft() {
+    $.getJSON( "http://btc.blockr.io/api/v1/address/info/" + $(".bitcoin-address").html(), function( json ) {
+      var totalBitcoins = 7341.02;
+      if (json.data.totalreceived > totalBitcoins) {
+        window.clearInterval(window.intervalID);
+        $(".buying-active").hide();
+        $(".buying-disabled").show();
+      } else {
+        var currentRemaining = $( ".new-figure" ).html();
+        var newRemaining = totalBitcoins - json.data.totalreceived;
+
+        if (currentRemaining == "&nbsp;&nbsp;&nbsp;&nbsp;" || currentRemaining - newRemaining >= 0.01) {
+           $( ".new-figure" ).fadeOut( 500, "linear", function() {
+            $( ".new-figure" ).html(newRemaining.toFixed(2));
+            $( ".new-figure" ).fadeIn( 500, "linear");
+          });
+        }
+      }
+    });
+  }
   </script>
 </body>
 

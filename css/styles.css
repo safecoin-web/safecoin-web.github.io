@@ -9,6 +9,8 @@
 	  font-family: 'OpenSansRegular', Arial, sans-serif;
     }
 	
+	h1 { font-size:32px; margin-bottom:40px;}
+	
 	h2 {margin-bottom:35px;}
 	
 	/* FONTS
@@ -136,6 +138,10 @@
 
 .strong {font-family: 'OpenSansBold',Arial,sans-serif;}
 
+.black { color:#000;}
+
+.sml { font-size:10px;}
+
 
 
     /* CUSTOMIZE THE NAVBAR
@@ -193,6 +199,8 @@
     .carousel {
       margin-bottom: 60px;
     }
+	
+	.carousel h2 { font-size:20px; color:#fff; line-height:24px;}
 
     .carousel .container {
       position: relative;
@@ -210,14 +218,14 @@
     }
 
     .carousel .item {
-      height: 500px;
+      height: 450px;
     }
     .carousel img {
       position: absolute;
       top: 0;
       left: 0;
       min-width: 100%;
-      height: 500px;
+      height: 450px;
     }
 
     .carousel-caption {

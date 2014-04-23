@@ -387,24 +387,24 @@
   <script>
   $(function() {		
 	var intervalID = window.setInterval(function(){
-	  $.getJSON( "http://btc.blockr.io/api/v1/address/balance/" + $(".bitcoin-address").html(), function( json ) {
+	  $.getJSON( "http://btc.blockr.io/api/v1/address/info/" + $(".bitcoin-address").html(), function( json ) {
 	  
 		 // Handles the section for showing counter or not
-		 var availableBitcoins = 1280;
-		if (json.data.balance > availableBitcoins) {
+		var totalBitcoins = 7341.02;
+		if (json.data.totalreceived > totalBitcoins) {
 			window.clearInterval(intervalID);
 			$(".buying-active").hide();
 			$(".buying-disabled").show();
 		} else {		
 			// handles the fade in for switching to a new remaining count
 			var currentRemaining = $( ".new-figure" ).html();
-			var newRemaining = availableBitcoins - json.data.balance.toFixed(2);
+			var newRemaining = totalBitcoins - json.data.totalreceived;
 			
 			if (currentRemaining == "&nbsp;&nbsp;&nbsp;&nbsp;" || currentRemaining - newRemaining >= 1) {			
 				 $( ".new-figure" ).fadeOut( 500, "linear", function() {
-					$( ".new-figure" ).html(newRemaining);
+					$( ".new-figure" ).html(newRemaining.toFixed(2));
 					$( ".new-figure" ).fadeIn( 500, "linear");
-				});	
+				});
 			}
 		}
 	});

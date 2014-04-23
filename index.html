@@ -401,7 +401,7 @@
 			var currentRemaining = $( ".new-figure" ).html();
 			var newRemaining = totalBitcoins - json.data.totalreceived;
 			
-			if (currentRemaining == "&nbsp;&nbsp;&nbsp;&nbsp;" || currentRemaining - newRemaining >= 1) {			
+			if (currentRemaining == "&nbsp;&nbsp;&nbsp;&nbsp;" || currentRemaining - newRemaining >= 0.01) {
 				 $( ".new-figure" ).fadeOut( 500, "linear", function() {
 					$( ".new-figure" ).html(newRemaining.toFixed(2));
 					$( ".new-figure" ).fadeIn( 500, "linear");
@@ -409,7 +409,7 @@
 			}
 		}
 	});
-	}, 2000);
+	}, 20000);
   });
   </script>
 </body>

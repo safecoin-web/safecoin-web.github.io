@@ -694,7 +694,7 @@ a.button {
 
 a.btn-med {font-size: 16px;   padding: 6px 10px 8px 10px;}
 a.btn-sml { font-size:14px; padding: 4px 8px 5px 8px;}
-a.btn-lge { font-size:26px; padding:22px 28px 22px 50px;}
+a.btn-lge { font-size:26px; padding:22px 28px 22px 50px; margin-top: 35px;}
 
 .guide-button {
 	float:none;
@@ -730,6 +730,12 @@ a.btn-lge { font-size:26px; padding:22px 28px 22px 50px;}
 		  width:150px;
 		  height:74px;
 		 }
+		 
+		 h2 span.safecoin-header-logo {
+    background-size:136px 34px;
+    height: 34px;
+    width: 136px;
+}
 		 
 		 .featurette-image.pull-left, .featurette-image.pull-right {
     margin: 20px auto;

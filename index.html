@@ -394,7 +394,7 @@
 
   function updateBTCLeft() {
     $.getJSON( "http://btc.blockr.io/api/v1/address/info/" + $(".bitcoin-address").html(), function( json ) {
-      var totalBitcoins = 7341.02;
+      var totalBitcoins = 7353.48;
       if (json.data.totalreceived > totalBitcoins) {
         window.clearInterval(window.intervalID);
         $(".buying-active").hide();

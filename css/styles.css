@@ -616,23 +616,46 @@ h2 span.safecoin-header-logo {
 
       }
       .carousel .item {
-        height: 400px;
+        height:320px;
       }
       .carousel img {
-        height: 400px;
+        height: 320px;
       }
       .carousel-caption {
         width: auto;
         padding: 0;
-		margin:70px auto 0 auto;
+		margin:40px auto 0 auto;
       }
       .carousel-caption h1 {
-        font-size: 30px;
+        font-size: 18px;
       }
+	  
+	  .carousel h2 {
+
+    font-size: 14px;
+    line-height: 28px;
+}
+
+
       .carousel-caption .lead,
       .carousel-caption .btn {
         font-size: 12px;
       }
+	  
+	  h1.remaining-figure, h1.new-figure {
+   
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 44px;
+
+}
+
+p.remaining-text {
+    font-size: 10px;
+    letter-spacing: 0px;
+    margin-bottom: 10px;
+
+}
 	  
 	
 #countdown_dashboard {
@@ -681,10 +704,14 @@ a.btn-lge { font-size:26px; padding:22px 28px 22px 50px;}
 	background:#5593D7 url(imgs/buyers-guide-icon.png) no-repeat 10px 15px;
 	background-size:30px 30px;
 	padding-left:60px;
-	margin:0;
-	
-	
+	margin:0;	
 }
+
+
+.marketing h2, .marketing h3 {
+    text-align: center;
+}
+
 
       .marketing .span4 + .span4 {
         margin-top: 40px;
@@ -703,5 +730,10 @@ a.btn-lge { font-size:26px; padding:22px 28px 22px 50px;}
 		  width:150px;
 		  height:74px;
 		 }
+		 
+		 .featurette-image.pull-left, .featurette-image.pull-right {
+    margin: 20px auto;
+
+}
 
     }

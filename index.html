@@ -25,7 +25,6 @@
   <link rel="shortcut icon" href="ico/favicon.png">
 
  <script type="text/javascript">
-
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-49947169-1']);
   _gaq.push(['_trackPageview']);
@@ -107,8 +106,8 @@
 
   <div class="container marketing">
   
-  <span id="about"></span>
-  
+  <hr class="featurette-divider" id="about">
+    
 	 <div class="featurette section">
       <img class="featurette-image pull-right" src="img/safecoin-safe-network.png" alt="safecoin logo">
       <h2 class="featurette-heading">About <span class="safecoin-header-logo"></span></h2>
@@ -117,7 +116,7 @@
       <p>safecoin is a fair and transparent way of giving <a href="#div3">end users</a>, <a href="#div4">developers</a> and <a href="#div2">backers</a> the opportunity to get involved with SAFE network. safecoins may be earned, traded or purchased and a total
         cap of 4.3 billion will be generated.</p>
     </div>
-    
+
     <hr class="featurette-divider" id="end-users">
 
     <div class="featurette section">
@@ -205,10 +204,10 @@
     
     
     <p><span class="strong">Can I spend the 0.000055BTC I got with my MaidSafeCoins without affecting my MaidSafeCoins?</span>
-      <br/>Yes, you can. Your MaidSafeCoin balance stays with an address, and not with any particular BTC that also live on the address.  You can safely move the two independently.  However, you'll need a small amount of BTC at that address if you later want to transfer your MaidSafeCoins.</p>
+      <br/>Yes, you can. Your MaidSafe balance stays with an address, and not with any particular BTC that also live on the address.  You can safely move the two independently.  However, you'll need a small amount of BTC at that address if you later want to transfer your MSAFE coins.</p>
       
-      <p><span class="strong">Do I risk losing my MaidSafeCoins if I use a non MaidSafeCoin aware wallet to transfer this 0.000055BTC?</span>
-      <br/>No you don't. You can use any BTC friendly wallet to transfer the BTC. You only need a MaidSafeCoin aware wallet to transfer MaidSafeCoins.</p>
+      <p><span class="strong">Do I risk losing my MaidSafeCoins if I use a non MaidSafe aware wallet to transfer this 0.000055BTC?</span>
+      <br/>No you don't. You can use any BTC friendly wallet to transfer the BTC. You only need a MaidSafe aware wallet to transfer MaidSafe.</p>
       
       <p>For more help please visit <a href="http://safecointalk.org/">safecointalk.org</a>.</p>
     </div>
@@ -227,6 +226,10 @@
 
     <!-- /END THE FEATURETTES -->
 
+<div class="anchor-arrows">
+        <a id="prev" href="#" class="arrow up"></a>
+        <a id="next" href="#" class="arrow down"></a>
+      </div>
 
     <!-- FOOTER -->
     <footer>
@@ -235,19 +238,19 @@
       <p>&copy; 2014 safecoin, All rights reserved.
       </p>
 
-     
-    </footer>
+   </footer>
 
   </div>
   <!-- /.container -->
 
 
 
-  <!-- Le javascript
+  <!-- Javascript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  
-  <script src="js/jquery.js"></script>
+
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.scrollTo-min.js"></script>
   <script src="js/bootstrap-transition.js"></script>
   <script src="js/bootstrap-alert.js"></script>
   <script src="js/bootstrap-modal.js"></script>
@@ -273,7 +276,7 @@
         {
           $('html,body').animate(
           {
-            scrollTop: target.offset().top -40
+            scrollTop: target.offset().top -10
           }, 1000);
           return false;
         }
@@ -282,5 +285,41 @@
   });
   </script>
 
+<script type="text/javascript">
+$(function() {
+
+    function scroll(direction) {
+
+        var scroll, i,
+                positions = [],
+                here = $(window).scrollTop(),
+                collection = $('.featurette-divider');
+
+        collection.each(function() {
+            positions.push(parseInt($(this).offset()['top'],10));
+        });
+
+        for(i = 0; i < positions.length; i++) {
+            if (direction == 'next' && positions[i] > here) { scroll = collection.get(i); break; }
+            if (direction == 'prev' && i > 0 && positions[i] >= here) { scroll = collection.get(i-1); break; }
+        }
+
+        if (scroll) {
+            $.scrollTo(scroll, {
+                duration: 750       
+            });
+        }
+
+        return false;
+    }
+
+    $("#next,#prev").click(function() {        
+        return scroll($(this).attr('id'));        
+    });
+
+
+
+});
+</script>
 </body>
 </html>

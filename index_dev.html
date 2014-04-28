@@ -24,6 +24,49 @@
   <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
   <link rel="shortcut icon" href="ico/favicon.png">
 
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+ <script type="text/javascript" src="js/jquery.scrollTo-min.js"></script>
+<script type="text/javascript">
+$(function() {
+
+    function scroll(direction) {
+
+        var scroll, i,
+                positions = [],
+                here = $(window).scrollTop(),
+                collection = $('.post');
+
+        collection.each(function() {
+            positions.push(parseInt($(this).offset()['navbar'],10));
+        });
+
+        for(i = 0; i < positions.length; i++) {
+            if (direction == 'next' && positions[i] > here) { scroll = collection.get(i); break; }
+            if (direction == 'prev' && i > 0 && positions[i] >= here) { scroll = collection.get(i-1); break; }
+        }
+
+        if (scroll) {
+            $.scrollTo(scroll, {
+                duration: 750       
+            });
+        }
+
+        return false;
+    }
+
+    $("#next,#prev").click(function() {        
+        return scroll($(this).attr('id'));        
+    });
+
+    $(".scrolltoanchor").click(function() {
+        $.scrollTo($($(this).attr("href")), {
+            duration: 750
+        });
+        return false;
+    });
+
+});
+</script>
  <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -107,7 +150,7 @@
 
   <div class="container marketing" id="about">
     
-	 <div class="featurette section">
+	 <div class="featurette section post">
       <img class="featurette-image pull-right" src="img/safecoin-safe-network.png" alt="safecoin logo">
       <h2 class="featurette-heading">About <span class="safecoin-header-logo"></span></h2>
       <p class="lead">safecoin is the crypto currency of the SAFE (Secure Access For Everyone) network.</p>
@@ -123,7 +166,7 @@
 
 
 
-    <div class="featurette section">
+    <div class="featurette section post">
       <img class="featurette-image pull-right" src="img/por-diagram.png" alt="Proof of Resource diagram">
       <h2 class="featurette-heading">End Users <span class="muted">Proof of Resource</span></h2>
       <p class="lead">End users can farm (or earn) safecoins by providing Proof of Resource (POR).</p>
@@ -166,14 +209,14 @@
 
     <hr class="featurette-divider" id="developers">
 
-    <div class="featurette section">
+    <div class="featurette section post">
       <h2 class="featurette-heading">Developers <span class="muted">for safecoin</span></h2>
       <p>15% of all safecoin earned will be allocated to the developer pool. This will ensure the developer community is highly motivated and rewarded for providing free-to-use applications as their revenue model. It is proposed that developers are able to use the SAFE network to publish their applications. These application developers are called Builders and the network will reward use of these applications by paying the Builders in safecoin based on the application use by users of the system. This is possible since the application developer can insert their own network immutable wallet address in their application. This exciting proposal may be a fully automatic revenue model for both open source projects, private individuals and application development companies. Developers who contribute code that enhances or fixes bugs in the SAFE network that are accepted into the master branch of the codebase will also be able to earn safecoin. </p>
     </div>
 
     <hr class="featurette-divider" id="faqs">
 
-    <div class="featurette section">
+    <div class="featurette section post">
       <h2 class="featurette-heading">FAQs <span class="muted">What would you like to know?</span></h2>
      <p><span class="strong">I bought with bitcoins, where are my MaidSafeCoins?</span>
         <br/>
@@ -208,17 +251,17 @@
     
     
     <p><span class="strong">Can I spend the 0.000055BTC I got with my MaidSafeCoins without affecting my MaidSafeCoins?</span>
-      <br/>Yes, you can. Your MaidSafeCoin balance stays with an address, and not with any particular BTC that also live on the address.  You can safely move the two independently.  However, you'll need a small amount of BTC at that address if you later want to transfer your MaidSafeCoins.</p>
+      <br/>Yes, you can. Your MaidSafe balance stays with an address, and not with any particular BTC that also live on the address.  You can safely move the two independently.  However, you'll need a small amount of BTC at that address if you later want to transfer your MSAFE coins.</p>
       
-      <p><span class="strong">Do I risk losing my MaidSafeCoins if I use a non MaidSafeCoin aware wallet to transfer this 0.000055BTC?</span>
-      <br/>No you don't. You can use any BTC friendly wallet to transfer the BTC. You only need a MaidSafeCoin aware wallet to transfer MaidSafeCoins.</p>
+      <p><span class="strong">Do I risk losing my MaidSafeCoins if I use a non MaidSafe aware wallet to transfer this 0.000055BTC?</span>
+      <br/>No you don't. You can use any BTC friendly wallet to transfer the BTC. You only need a MaidSafe aware wallet to transfer MaidSafe.</p>
       
       <p>For more help please visit <a href="http://safecointalk.org/">safecointalk.org</a>.</p>
     </div>
     
     <hr class="featurette-divider" id="contact">
 
-    <div class="featurette section">
+    <div class="featurette section post">
       <h2 class="featurette-heading">Contact <span class="muted">Us</span></h2>
       <p class="lead">Get in touch</p>
       <p><a href="mailto:info@maidsafe.net">info@maidsafe.net</a>
@@ -252,7 +295,7 @@
   <!-- Le javascript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  
+  <!--
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap-transition.js"></script>
   <script src="js/bootstrap-alert.js"></script>
@@ -286,8 +329,11 @@
       }
     });
   });
-  </script>
+  </script>-->
 
+
+
+<!--
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
@@ -327,6 +373,6 @@
 
   });
   </script>
-
+  -->
 </body>
 </html>

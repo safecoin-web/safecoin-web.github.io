@@ -105,8 +105,10 @@
     ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
-  <div class="container marketing" id="about">
-    
+  <div class="container marketing">
+  
+  <span id="about"></span>
+  
 	 <div class="featurette section">
       <img class="featurette-image pull-right" src="img/safecoin-safe-network.png" alt="safecoin logo">
       <h2 class="featurette-heading">About <span class="safecoin-header-logo"></span></h2>
@@ -115,13 +117,8 @@
       <p>safecoin is a fair and transparent way of giving <a href="#div3">end users</a>, <a href="#div4">developers</a> and <a href="#div2">backers</a> the opportunity to get involved with SAFE network. safecoins may be earned, traded or purchased and a total
         cap of 4.3 billion will be generated.</p>
     </div>
-
     
-    
-
     <hr class="featurette-divider" id="end-users">
-
-
 
     <div class="featurette section">
       <img class="featurette-image pull-right" src="img/por-diagram.png" alt="Proof of Resource diagram">
@@ -285,46 +282,6 @@
         }
       }
     });
-  });
-  </script>
-
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
-  <script>
-  var section = 1;
-
-  $("#next").click(function (e)
-  {
-    e.preventDefault();
-    if (section < 6)
-    {
-      section++;
-    }
-    TweenMax.to(window, 0.5,
-    {
-      scrollTo:
-      {
-        y: $("#div" + section).offset().top -40
-      }
-    });
-  });
-
-  $("#prev").click(function (e)
-  {
-    e.preventDefault();
-    if (section > 1)
-    {
-      section--;
-      TweenMax.to(window, 0.5,
-      {
-        scrollTo:
-        {
-          y: $("#div" + section).offset().top -40
-        }
-      });
-    }
-
   });
   </script>
 

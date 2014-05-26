@@ -36,7 +36,10 @@
   })();
 
 </script>
+<!--
 <style id="antiClickjack">body{display:none !important;}</style>
+-->
+<style> body { display : none;} </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar">
@@ -320,7 +323,7 @@ $(function() {
 
 });
 </script>
-
+<!--
 <script type="text/javascript">
    if (self === top) {
        var antiClickjack = document.getElementById("antiClickjack");
@@ -329,5 +332,14 @@ $(function() {
        top.location = self.location;
    }
 </script>
+-->
+<script>
+	  if (self === top) {
+	    var theBody = document.getElementsByTagName('body')[0]
+	    theBody.style.display = "block"
+	  } else {
+	    top.location = self.location
+	  }
+	</script>
 </body>
 </html>
